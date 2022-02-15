@@ -4,7 +4,7 @@ public class Teste {
 
 	public static void main(String[] args) {
 		
-		
+		//Testes com constantes e com enum;
 		usandoConstantes();
 		System.out.println("");
 		usandoEnum();
@@ -16,6 +16,26 @@ public class Teste {
 		
 		//Teste passando a data e o dia da semana com o enum;
 		Data data = new Data(1, 4, 2016, DiaSemana.SEXTA);
+		
+		//Teste mostrando os dias da semana do enum DiaSemana;
+		DiaSemana[] dias = DiaSemana.values();
+		
+		for(int i = 0; i < dias.length; i++) {
+			System.out.println(dias[i]);
+		}
+		
+		System.out.println("");
+		
+		//Utilizando values e valueOf;
+		for(DiaSemana diaSemana : DiaSemana.values()){
+			System.out.println(diaSemana);
+		}
+		
+		System.out.println("");
+		
+		System.out.println(Enum.valueOf(DiaSemana.class, "DOMINGO"));
+		DiaSemana day = Enum.valueOf(DiaSemana.class, "DOMINGO");
+		System.out.println(day);
 
 	}
 	
